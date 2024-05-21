@@ -4,7 +4,7 @@ import Title from "../components/ui/Title";
 import { useState, useEffect } from "react";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
-import Card from "../components/ui/card";
+import Card from "../components/ui/Card";
 import Colors from "../const/colors";
 import InstructionText from "../components/ui/InstructionText";
 

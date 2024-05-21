@@ -4,7 +4,7 @@ import { useState } from 'react';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import Colors from '../const/colors';
 import Title from '../components/ui/Title';
-import Card from '../components/ui/card';
+import Card from '../components/ui/Card.js';
 import InstructionText from '../components/ui/InstructionText';
 
 function StartGameScreen({onPickNumber}) {
