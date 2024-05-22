@@ -11,7 +11,7 @@ function GameOverScreen({roundsNumber, userNumber, onStartNewGame}){
             <Image style={styles.image} source={require('../assets/images/success.png')}/>
         </View>
         <Text style={styles.summaryText}>
-            El telèfon ha necessitat <Text style={styles.higlight}>{roundsNumber}</Text> rondes per adivinar el nombre<Text style={styles.higlight}>{userNumber}</Text>
+            El telèfon ha necessitat <Text style={styles.higlight}>{roundsNumber}</Text> rondes per adivinar el nombre <Text style={styles.higlight}>{userNumber}</Text>
         </Text>
         <PrimaryButton onPress={onStartNewGame}>Torna-hi</PrimaryButton>
 
