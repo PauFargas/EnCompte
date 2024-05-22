@@ -4,9 +4,10 @@ import Title from "../components/ui/Title";
 import { useState, useEffect } from "react";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
-import Card from "../components/ui/Card";
+import Card from "../components/ui/card";
 import Colors from "../const/colors";
 import InstructionText from "../components/ui/InstructionText";
+import { Ionicons } from '@expo/vector-icons'
 
 let minBoundary = 1;
 let maxBoundary = 100;
@@ -57,10 +58,18 @@ function GameScreen({ userNumber, onGameOver }) {
             <Title>Opponent's Guess</Title>
             <NumberContainer>{currentGuess}</NumberContainer>
             <Card>
-                <InstructionText>Amunt o avall?</InstructionText>
-                <View>
-                    <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>-</PrimaryButton>
-                    <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>+</PrimaryButton>
+                <InstructionText style={styles.instructionText}>Amunt o avall?</InstructionText>
+                <View style={styles.buttonsContainer}>
+                    <View style={styles.buttonContainer}>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
+                            <Ionicons name='remove' size={24} color={'white'}/>
+                        </PrimaryButton>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>
+                            <Ionicons name='add-sharp' size={24} color={'white'}/>
+                        </PrimaryButton>
+                    </View>
                 </View>
             </Card>
             <View></View>
@@ -75,4 +84,13 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 24,
     },
+    buttonsContainer: {
+        flexDirection: 'row'
+    },
+    buttonContainer:{
+        flex: 1
+    },
+    instructionText:{
+        marginBottom: 12,
+    }
 });
